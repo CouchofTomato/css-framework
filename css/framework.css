@@ -1,0 +1,303 @@
+/*
+#CABAC8
+#FCF7FF
+#878C8F
+#655560
+#944654
+*/
+
+/*
+    css reset
+*/
+
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+body {
+	line-height: 1;
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+/*
+    general
+*/
+
+html {
+  box-sizing: border-box;
+}
+
+body {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-size: 16px;
+  line-height: 1.5;
+  margin: 0;
+  padding: 0;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    padding: 15px;
+    font-weight: 700;
+}
+
+h1 {
+    font-size: 1.6em;
+}
+
+h2 {
+    font-size: 1.5em;
+}
+
+h3 {
+    font-size: 1.4em;
+}
+
+h4 {
+    font-size: 1.3em;
+}
+
+h5 {
+    font-size: 1.2em;
+}
+
+h6 {
+    font-size: 1.1em;
+}
+
+img {
+    max-width: 100%;
+    height: auto;
+}
+
+p {
+    padding: 15px;
+}
+
+ul {
+    padding: 15px;
+    list-style-type: circle;
+    line-height: 2em;
+}
+
+*, *:before, *:after {
+  box-sizing: inherit;
+}
+
+/*
+    grid
+*/
+
+.container {
+  margin-left: auto;
+  margin-right: auto;
+  padding-left: 15px;
+  padding-right: 15px;
+}
+
+.row {
+    display: grid;
+    grid-template-columns: repeat(12, 1fr);
+    grid-gap: 20px;
+    margin: 20px 0;
+}
+
+[class*='col-'] {
+  display: grid;
+}
+
+.col-12 {
+    grid-column: span 12;
+}
+
+.col-11 {
+    grid-column: span 11;
+}
+
+.col-10 {
+    grid-column: span 10;
+}
+
+.col-9 {
+    grid-column: span 9;
+}
+
+.col-8 {
+    grid-column: span 8;
+}
+
+.col-7 {
+    grid-column: span 7;
+}
+
+.col-6 {
+    grid-column: span 6;
+}
+
+.col-5 {
+    grid-column: span 5;
+}
+
+.col-4 {
+    grid-column: span 4;
+}
+
+.col-3 {
+    grid-column: span 3;
+}
+
+.col-2 {
+    grid-column: span 2;
+}
+
+.col-1 {
+    grid-column: span 1;
+}
+
+/*
+    nav
+*/
+
+.navbar {
+    display: flex;
+    background: #f0f0f0;
+    height: 70px;
+}
+
+.navbar ul  {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+}
+
+.navbar ul li {
+    display: flex;
+    align-items: center;
+    list-style: none;
+    padding: 15px;
+    border-right: 1px solid #a6a6a6;
+    height: 70px;
+    border-radius: 8px;
+    min-width: 75px;
+    overflow: hidden;
+}
+
+.navbar ul li a {
+    text-decoration: none;
+    font-size: 1.2em;
+}
+
+.navbar-center {
+    justify-content: center;
+}
+
+.navbar-right {
+    justify-content: flex-end;
+}
+
+.navbar .brand-image img {
+    height: inherit;
+}
+
+/*
+    brand
+*/
+
+.brand-image {
+    height: inherit;
+}
+
+/*
+    media queries
+*/
+
+@media (max-width: 1200px) {
+    .col-1 {
+        grid-column: span 2;
+    }
+}
+
+@media (max-width: 1024px) {
+    .col-2 {
+        grid-column: span 3;
+    }
+}
+
+@media (max-width: 800px) {
+    .col-1 {
+        grid-column: span 3;
+    }
+    
+    .col-2 {
+        grid-column: span 4;
+    }
+}
+
+@media (max-width: 600px) {
+    .navbar {
+        display: flex;
+        flex-direction: column;
+        height: auto;
+    }
+    
+    .navbar ul {
+        display: flex;
+        flex-direction: column;
+    }
+    
+    .navbar ul li {
+        border-right: none;
+        width: 100%;
+        padding: 0;
+        margin: 1px 0;
+        height: 30px;
+        border: 1px solid black;
+    }
+    
+    .navbar .brand-image {
+        width: 100%;
+    }
+    
+    .navbar .brand-image img {
+        margin: 0 auto;
+        height: 200px;
+    }
+    
+    .col-1, .col-2, .col-3, .col-4, .col-5, .col-6, .col-7, .col-8, .col-9, .col-10, .col-11, .col-12 {
+        grid-column: span 12;
+    }
+}
